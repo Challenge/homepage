@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="plugin" version="2.5" group="system" method="upgrade">
+    <name>System - EasyCalcCheck PLUS - ECC+</name>
+    <version>2.5-1</version>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <author>Viktor Vogel</author>
+    <authoremail>admin@kubik-rubik.de</authoremail>
+    <authorurl>http://www.kubik-rubik.de</authorurl>
+    <copyright>Copyright 2012 Viktor Vogel. All rights reserved.</copyright>
+    <creationDate>24.01.2012</creationDate>
+    <description>PLG_ECC_XML_DESCRIPTION</description>
+    <files folder="site">
+        <filename plugin="easycalccheckplus">easycalccheckplus.php</filename>
+        <filename plugin="easycalccheckplus">easycalccheckplus/warning.png</filename>
+        <filename plugin="easycalccheckplus">easycalccheckplus/akismet.php</filename>
+        <filename plugin="easycalccheckplus">easycalccheckplus/mollom.php</filename>
+        <filename plugin="easycalccheckplus">easycalccheckplus/honeypot.php</filename>
+        <filename plugin="easycalccheckplus">easycalccheckplus/recaptchalib.php</filename>
+        <filename plugin="easycalccheckplus">bottrap/page.restrictor.log</filename>
+    </files>
+    <languages folder="site/language">
+        <language tag="de-DE">de-DE/de-DE.plg_system_easycalccheckplus.ini</language>
+        <language tag="de-DE">de-DE/de-DE.plg_system_easycalccheckplus.sys.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_system_easycalccheckplus.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_system_easycalccheckplus.sys.ini</language>
+        <language tag="hu-HU">hu-HU/hu-HU.plg_system_easycalccheckplus.ini</language>
+        <language tag="hu-HU">hu-HU/hu-HU.plg_system_easycalccheckplus.sys.ini</language>
+        <language tag="ru-RU">ru-RU/ru-RU.plg_system_easycalccheckplus.ini</language>
+        <language tag="ru-RU">ru-RU/ru-RU.plg_system_easycalccheckplus.sys.ini</language>
+        <language tag="fr-FR">fr-FR/fr-FR.plg_system_easycalccheckplus.ini</language>
+        <language tag="fr-FR">fr-FR/fr-FR.plg_system_easycalccheckplus.sys.ini</language>
+        <language tag="it-IT">it-IT/it-IT.plg_system_easycalccheckplus.ini</language>
+        <language tag="it-IT">it-IT/it-IT.plg_system_easycalccheckplus.sys.ini</language>
+        <language tag="sr-RS">sr-RS/sr-RS.plg_system_easycalccheckplus.ini</language>
+        <language tag="sr-RS">sr-RS/sr-RS.plg_system_easycalccheckplus.sys.ini</language>
+        <language tag="sr-YU">sr-YU/sr-YU.plg_system_easycalccheckplus.ini</language>
+        <language tag="sr-YU">sr-YU/sr-YU.plg_system_easycalccheckplus.sys.ini</language>
+        <language tag="cs-CZ">cs-CZ/cs-CZ.plg_system_easycalccheckplus.ini</language>
+        <language tag="cs-CZ">cs-CZ/cs-CZ.plg_system_easycalccheckplus.sys.ini</language>
+		<language tag="nl-NL">nl-NL/nl-NL.plg_system_easycalccheckplus.ini</language>
+        <language tag="nl-NL">nl-NL/nl-NL.plg_system_easycalccheckplus.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="type_calc" type="radio" default="1" label="PLG_ECC_CALCCHECK" description="PLG_ECC_CALCCHECKDESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="operator" type="radio" default="2" label="PLG_ECC_OPERATOR" description="PLG_ECC_OPERATORDESC">
+                    <option value="0">+</option>
+                    <option value="1">-</option>
+                    <option value="2">RANDOM</option>
+                </field>
+                <field name="operand" type="radio" default="2" label="PLG_ECC_OPERAND" description="PLG_ECC_OPERANDDESC">
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </field>
+                <field name="negativ" type="radio" default="0" label="PLG_ECC_NEGATIV" description="PLG_ECC_NEGATIVDESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="converttostring" type="radio" default="0" label="PLG_ECC_CONVERT" description="PLG_ECC_CONVERTDESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="max_value" type="text" default="20" label="PLG_ECC_MAXIMUMVALUE" description="PLG_ECC_MAXIMUMVALUEDESC" />
+                <field name="type_hidden" type="radio" default="1" label="PLG_ECC_HIDDENFIELD" description="PLG_ECC_HIDDENFIELDDESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="type_time" type="radio" default="1" label="PLG_ECC_TIMEHIDDEN" description="PLG_ECC_TIMEHIDDENDESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="type_time_sec" type="text" default="5" label="PLG_ECC_TIMEHIDDENSEC" description="PLG_ECC_TIMEHIDDENSECDESC" />
+                <field name="recaptcha" type="radio" default="0" label="PLG_ECC_RECAPTCHA" description="PLG_ECC_RECAPTCHADESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="recaptcha_theme" type="radio" default="0" label="PLG_ECC_RECAPTCHATHEME" description="PLG_ECC_RECAPTCHATHEMEDESC">
+                    <option value="0">Red</option>
+                    <option value="1">White</option>
+                    <option value="2">Blackglass</option>
+                    <option value="3">Clean</option>
+                </field>
+                <field name="recaptcha_publickey" type="text" default="" size="60" label="PLG_ECC_RECAPTCHAPUBLICKEY" description="PLG_ECC_RECAPTCHAPUBLICKEYDESC" />
+                <field name="recaptcha_privatekey" type="text" default="" size="60" label="PLG_ECC_RECAPTCHAPRIVATEKEY" description="PLG_ECC_RECAPTCHAPRIVATEKEYDESC" />
+                <field name="question" type="radio" default="0" label="PLG_ECC_QUESTION" description="PLG_ECC_QUESTIONDESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="question_q" type="text" default="" size="50" label="PLG_ECC_QUESTIONQ" description="PLG_ECC_QUESTIONQDESC" />
+                <field name="question_a" type="text" default="" size="50" label="PLG_ECC_QUESTIONA" description="PLG_ECC_QUESTIONADESC" />
+            </fieldset>
+            <fieldset name="PLG_ECC_EXTRA">
+                <field name="user_reg" type="radio" default="1" label="PLG_ECC_USERREGISTRATION" description="PLG_ECC_USERREGISTRATIONDESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="contact" type="radio" default="1" label="PLG_ECC_CONTACTFORM" description="PLG_ECC_CONTACTFORMDESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="alfcontact" type="radio" default="0" label="PLG_ECC_ALFCONTACT" description="PLG_ECC_ALFCONTACTDESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="communitybuilder" type="radio" default="0" label="PLG_ECC_COMMUNITYBUILDER" description="PLG_ECC_COMMUNITYBUILDERDESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="dfcontact" type="radio" default="0" label="PLG_ECC_DFCONTACT" description="PLG_ECC_DFCONTACTDESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="easybookreloaded" type="radio" default="0" label="PLG_ECC_EASYBOOKRELOADED" description="PLG_ECC_EASYBOOKRELOADEDDESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="foxcontact" type="radio" default="0" label="PLG_ECC_FOXCONTACT" description="PLG_ECC_FOXCONTACTDESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="flexicontact" type="radio" default="0" label="PLG_ECC_FLEXICONTACT" description="PLG_ECC_FLEXICONTACTDESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="kunena" type="radio" default="0" label="PLG_ECC_KUNENA" description="PLG_ECC_KUNENADESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="phocaguestbook" type="radio" default="0" label="PLG_ECC_PHOCAGUESTBOOK" description="PLG_ECC_PHOCAGUESTBOOKDESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="autofill_values" type="radio" default="1" label="PLG_ECC_KEEPVALUES" description="PLG_ECC_KEEPVALUESDESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="warn_ref" type="radio" default="0" label="PLG_ECC_WARNINGREFERENCE" description="PLG_ECC_WARNINGREFERENCEDESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="encode" type="radio" default="1" label="PLG_ECC_ENCODE" description="PLG_ECC_ENCODEDESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="onlyguests" type="radio" default="1" label="PLG_ECC_ONLYGUESTS" description="PLG_ECC_ONLYGUESTSDESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="string_alternative" type="textarea" default="" filter="raw" label="PLG_ECC_STRINGALTERNATIVE" description="PLG_ECC_STRINGALTERNATIVEDESC" rows="3" cols="25" />
+                <field name="poweredby" type="radio" default="1" label="PLG_ECC_POWEREDBY" description="PLG_ECC_POWEREDBYDESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+            </fieldset>
+            <fieldset name="PLG_ECC_BOTSTOP">
+                <field name="stopforumspam" type="radio" default="0" label="PLG_ECC_STOPFORUMSPAM" description="PLG_ECC_STOPFORUMSPAMDESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="sqlinjection-lfi" type="radio" default="0" label="PLG_ECC_SQLINJECTIONANDLOCALFILEINCLUSION" description="PLG_ECC_SQLINJECTIONANDLOCALFILEINCLUSIONDESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="honeypot" type="radio" default="0" label="PLG_ECC_HONEYPOT" description="PLG_ECC_HONEYPOTDESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="honeypot_key" type="text" default="" label="PLG_ECC_HONEYPOTKEY" description="PLG_ECC_HONEYPOTKEYDESC" />
+                <field name="akismet" type="radio" default="0" label="PLG_ECC_AKISMET" description="PLG_ECC_AKISMETDESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="akismet_key" type="text" default="" label="PLG_ECC_AKISMETKEY" description="PLG_ECC_AKISMETKEYDESC" />
+                <field name="mollom" type="radio" default="0" label="PLG_ECC_MOLLOM" description="PLG_ECC_MOLLOMDESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="mollom_publickey" type="text" default="" size="50" label="PLG_ECC_MOLLOMPUBLICKEY" description="PLG_ECC_MOLLOMPUBLICKEYDESC" />
+                <field name="mollom_privatekey" type="text" default="" size="50" label="PLG_ECC_MOLLOMPRIVATEKEY" description="PLG_ECC_MOLLOMPRIVATEKEYDESC" />
+                <field name="botscout" type="radio" default="0" label="PLG_ECC_BOTSCOUT" description="PLG_ECC_BOTSCOUTDESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="botscout_key" type="text" default="" label="PLG_ECC_BOTSCOUTKEY" description="PLG_ECC_BOTSCOUTKEYDESC" />
+            </fieldset>
+            <fieldset name="PLG_ECC_BOTTRAPDEFAULT">
+                <field name="bottrap" type="radio" default="0" label="PLG_ECC_BOTTRAP" description="PLG_ECC_BOTTRAPDESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="btWhitelistIP" type="textarea" default="" label="PLG_ECC_BTWHITELISTIP" description="PLG_ECC_BTWHITELISTIPDESC" rows="3" cols="25" />
+                <field name="btWhitelistIPRange" type="textarea" default="" label="PLG_ECC_BTWHITELISTIPRANGE" description="PLG_ECC_BTWHITELISTIPRANGEDESC" rows="3" cols="25" />
+                <field name="btWhitelistUA" type="textarea" default="" label="PLG_ECC_BTWHITELISTUA" description="PLG_ECC_BTWHITELISTUADESC" rows="3" cols="25" />
+                <field name="btBlacklistIP" type="textarea" default="" label="PLG_ECC_BTBLACKLISTIP" description="PLG_ECC_BTBLACKLISTIPDESC" rows="3" cols="25" />
+                <field name="btBlacklistIPRange" type="textarea" default="" label="PLG_ECC_BTBLACKLISTIPRANGE" description="PLG_ECC_BTBLACKLISTIPRANGEDESC" rows="3" cols="25" />
+                <field name="btBlacklistUA" type="textarea" default="" label="PLG_ECC_BTBLACKLISTUA" description="PLG_ECC_BTBLACKLISTUADESC" rows="3" cols="25" />
+            </fieldset>
+            <fieldset name="PLG_ECC_BACKEND">
+                <field name="backendprotection" type="radio" default="0" label="PLG_ECC_BACKENDPROTECTION" description="PLG_ECC_BACKENDPROTECTIONDESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="token" type="text" default="" label="PLG_ECC_TOKEN" description="PLG_ECC_TOKENDESC" />
+                <field name="urlfalsetoken" type="text" default="" size="40" label="PLG_ECC_URLFALSETOKEN" description="PLG_ECC_URLFALSETOKENDESC" />
+            </fieldset>
+        </fields>
+    </config>
+</extension>

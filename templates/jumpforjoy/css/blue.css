@@ -1,0 +1,179 @@
+﻿/*****************************/
+/*** Core html setup stuff ***/
+/*****************************/
+.button, .inputbox { 
+	border: 1px solid #7fadd4;
+	background:#d3e7f9;
+	color:#000;
+}
+.button:hover, .inputbox:hover { background:#e8f4ff; }
+
+a:link, a:visited {color: #0150bd;}
+a:hover, a:active, a:focus {color: #002df0;}
+
+body {background: #d8e9f8 url(../images/bkg_body.jpg) top center repeat-y;}
+body, td, div, p {color: #000;}
+
+/*****************************************/
+/*** Template specific layout elements ***/
+/*****************************************/
+#wrapper {}
+
+#header{background: url(../images/bkg_header.jpg) top left no-repeat;}
+
+#title {	color: #fff;}
+
+/**********************/
+/*** Top Navigation ***/
+/**********************/
+#topnavi {background:#000;}
+#topnavi ul {}
+#topnavi ul li {border-right: 1px solid #d3e7f9;}
+#topnavi ul li a {}
+#topnavi ul li a span{color: #90c8f7;}
+#topnavi ul li a:hover, #topnavi li#current a {background:#90c8f7;}
+#topnavi ul li a:hover span, #topnavi li#current a span{color: #fff;}
+
+/**********************/
+/*** User 4 (Search menu) ***/
+/**********************/
+#search {
+	border: 1px solid #3d6184;
+}
+
+#search div.search .inputbox{
+	border: none;
+	background: transparent;
+	color:#5b8cbc;
+}
+
+/**********************/
+/*** Top (Newsflash) ***/
+/**********************/
+
+/**********************/
+/*** Main Body ***/
+/**********************/
+#main{}
+
+/**********************/
+/*** Left Column ***/
+/**********************/
+#leftcol h3{
+	color: #fff;
+	background: url(../images/bkg_sideheader.gif) top left no-repeat; 
+}
+
+#leftcol div.module_menu div div, #leftcol div.module div div, #leftcol div.module_text div div{
+}
+
+#leftcol div.module_menu div div div, #leftcol div.module div div div, #leftcol div.module_text div div div{
+}
+
+#leftcol div.module_menu div div div div, #leftcol div.module div div div div, #leftcol div.module_text div div div div {background: transparent;}
+
+#leftcol div.module_menu , #leftcol div.module, #leftcol div.moduletable, #leftcol div.module_text {
+	background: #afd3f2; 
+} 
+
+#leftcol a:link, #leftcol a:visited {color:#0150bd;}
+#leftcol a:hover, #leftcol a:active {color:#002df0;}
+
+/**********************/
+/*** Right Column ***/
+/**********************/
+#rightcol h3{
+	color: #fff;
+	background: url(../images/bkg_sideheader.gif) top left no-repeat; 
+}
+
+#rightcol div.module_menu div div, #rightcol div.module div div, #rightcol div.module_text div div{
+}
+
+#rightcol div.module_menu div div div, #rightcol div.module div div div, #rightcol div.module_text div div div{
+}
+
+#rightcol div.module_menu div div div div, #rightcol div.module div div div div, #rightcol div.module_text div div div div {background: transparent;}
+
+#rightcol div.module_menu , #rightcol div.module, #rightcol div.moduletable, #rightcol div.module_text {
+	background: #afd3f2; 
+} 
+
+#rightcol a:link, #rightcol a:visited {color:#0150bd;}
+#rightcol a:hover, #rightcol a:active {color:#002df0;}
+
+/******************************************************************/
+/* Controls Link Icon appearance in side modules */
+/******************************************************************/
+#leftcol ul.menu li a,
+#leftcol ul.menu li ul li a,
+#rightcol ul.menu li a,
+#rightcol ul.menu li ul li a,
+#leftcol ul#mainlevel li a,
+#leftcol ul#mainlevel li ul li a,
+ul.mostread li a,
+ul.latestnews li a,
+.moduletable ul li a {
+	border-bottom: 1px solid #7fadd4;
+}
+
+#leftcol ul.menu li a:hover,
+#leftcol ul.menu li#current a,
+#leftcol ul.menu li ul li a:hover,
+#rightcol ul.menu li a:hover,
+#rightcol ul.menu li#current a,
+#rightcol ul.menu li ul li a:hover,
+#leftcol ul#mainlevel li a:hover,
+#leftcol ul#mainlevel li a#active_menu,
+#leftcol ul#mainlevel li ul li a:hover,
+ul.mostread li a:hover,
+ul.latestnews li a:hover,
+.moduletable ul li a:hover {
+	color: #002df0;
+	background: #d3e7f9;
+	border-bottom: 1px solid #7fadd4;
+}
+
+/**********************/
+/*** Main Content Menu ***/
+/**********************/
+.componentheading {color: #5071ff;}
+.contentheading {color: #000;}
+.contentpaneopen h3  {color: #000;}
+
+#pathway {color:#000;}
+
+.small, .createdate, .modifydate {color:#7899b6;}
+
+a.readon, a.readon:hover, a.readon:visited{
+	background: url(../images/bkg_readmore.png) top left no-repeat;
+}
+
+/**************************/
+/*** Advertisement Menu ***/
+/**************************/
+
+/*******************/
+/***  Login Form  ***/
+/*******************/
+
+/*************/
+/***  Polls  ***/
+/*************/
+td.sectiontableheader {
+  border-right: 1px solid #fff;
+  color: #000;
+  background: #d3e7f9;
+}
+
+/******************/
+/***  Copyright  ***/
+/******************/
+#copyright {
+	color:#fff;
+	background:#000;
+}
+
+#copyright a:link, #copyright a:active, #copyright a:visited {
+	color:#2b84ff;
+}

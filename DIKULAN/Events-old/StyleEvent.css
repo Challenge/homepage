@@ -1,0 +1,100 @@
+@CHARSET "UTF-8";
+
+body {
+	margin: 10px;
+}
+
+p {
+	font-size: 12px;
+}
+
+p.small {
+	font-size: 8px;
+}
+
+p.normal {
+	font-size: 12px;
+}
+
+p.large {
+	font-size: 18px;
+}
+
+p.huge {
+	font-size: 24px;
+}
+
+h1 {
+	font-size: 24px;
+}
+
+h2 {
+	font-size: 20px;
+}
+
+h3 {
+	font-size: 18px;
+}
+
+h4 {
+	font-size: 16px;
+}
+
+h5 {
+	font-size: 14px;
+}
+
+p.normal {
+	font-size: 12px;
+}
+
+p.description {
+	font-size: 11px;
+	margin-top: -15px;
+}
+
+.warningtext {
+	color: red;
+}
+
+#event_page,#administration_event_page {
+	/*height: 100%;
+	width: 100%;*/
+	margin-top: 20px;
+	margin-left: auto;
+	margin-bottom: 10px;
+	margin-right: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
