@@ -64,3 +64,4 @@ class JConfig {
 	public $captcha = '0';
 	public $MetaVersion = '0';
 }
+
