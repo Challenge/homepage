@@ -8,7 +8,7 @@ html {overflow-y: scroll;}
 html {height: 100%;}
 body { font-family: Helvetica, Arial, sans-serif; font-size:13px; line-height: 1.3; color: #555; }
 body.contentpane { background:#fff; color:#555;}
-.background {position: absolute;width: 100%; background:#000 url(../images/bg.jpg); background-size:cover;}
+.background {position: absolute;width: 100%; background:#000 url(../images/shadow.png); background-size:cover;}
 h1,h2,h3,h4,h5,h6 {margin:0; padding:10px 0; font-weight:bold; color:#134E8B;font-family:Arial, Helvetica, sans-serif;}
 .componentheading { font-style:italic;font-size:25px; margin:0; padding:0 0 10px 0; color:#1a528c;}
 h1 { font-size: 20px;}

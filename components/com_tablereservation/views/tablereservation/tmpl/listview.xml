@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Id: default.xml 51 2010-11-22 01:33:21Z chdemko $ -->
+<metadata>
+	<layout title="COM_TABLERESERVATION_TABLERESERVATION_VIEW_LISTVIEW_TITLE">
+		<message>COM_TABLERESERVATION_TABLERESERVATION_VIEW_LISTVIEW_DESC</message>
+	</layout>
+</metadata>
+

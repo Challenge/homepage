@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="1.6.0" method="upgrade">
+	<name>Event</name>
+	<creationDate>October 2013</creationDate>
+	<author>Ektorus</author>
+	<version>0.0.4</version>
+	<description>This model handles the DIKULAN events.</description>
+
+        <!-- SQL -->
+
+        <update> <!-- Runs on update; New in 1.6 -->
+                <schemas>
+                        <schemapath type="mysql">sql/updates/mysql</schemapath>
+                </schemas>
+        </update>
+
+
+	<!-- Site Main File Copy Section -->
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>event.php</filename>
+		<filename>controller.php</filename>
+		<folder>views</folder>
+		<folder>models</folder>
+	</files>
+
+	<media destination="com_dikulan-event" folder="media">
+		<filename>index.html</filename>
+		<folder>css</folder>
+	</media>
+
+	<administration>
+		<!-- Administration Menu Section -->
+		<menu>DIKULAN-event</menu>
+
+		<!-- Administration Main File Copy Section -->
+		<files folder="admin">
+			<filename>index.html</filename>
+			<filename>event.php</filename>
+			<!-- SQL files section -->
+			<folder>sql</folder>
+		</files>
+	</administration>
+
+</extension>
+
